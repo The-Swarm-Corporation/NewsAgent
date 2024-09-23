@@ -8,11 +8,8 @@
 
 ## Key Features
 
-- **Smart Query Crafting**: Automatically creates optimized queries to fetch the most relevant news from multiple sources.
+
 - **Multi-Article Summarization**: Efficiently summarizes multiple articles at once, reducing the noise and delivering concise insights.
-- **Real-Time Updates**: Fetch news in real-time or set scheduled intervals for continuous monitoring.
-- **Customizable Sources**: Add or remove specific news sources, tailored to your business needs.
-- **Enterprise Integration**: Easily integrates into existing enterprise platforms for automated news monitoring and alert systems.
 
 ## Installation
 
@@ -149,6 +146,13 @@ For enterprise customers, we offer:
 - **Integration Assistance** for your existing platforms (CRM, ERP, etc.)
 
 For more information on enterprise solutions, contact us at [kye@swarms.world](mailto:kye@swarms.world).
+
+# Todo
+- **Smart Query Crafting**: Automatically creates optimized queries to fetch the most relevant news from multiple sources.
+- **Real-Time Updates**: Fetch news in real-time or set scheduled intervals for continuous monitoring.
+- **Customizable Sources**: Add or remove specific news sources, tailored to your business needs.
+<!-- - **Enterprise Integration**: Easily integrates into existing enterprise platforms for automated news monitoring and alert systems. -->
+
 
 ## Contributing
 
