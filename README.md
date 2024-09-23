@@ -19,31 +19,78 @@
 To install **NewsAgent**, use the following command:
 
 ```bash
-pip3 install -U news-agent
+pip3 install -U news-swarm
 ```
 
-Ensure that you have Python 3.7+ installed.
+Ensure that you have Python 3.10+ installed.
+
+## Environment Variables
+
+```txt
+OPENAI_API_KEY="if you use openai"
+WORKSPACE_DIR="agent_workspace"
+NEWSAPI_API_KEY="api from the newsapi"
+```
 
 ## Quick Start
-
-### 1. Import and Initialize
-
 ```python
-from news_agent import NewsAgent
+import os
 
-# Initialize the agent with default or custom parameters
-agent = NewsAgent(api_key="your_api_key")
+from dotenv import load_dotenv
+from swarm_models import OpenAIChat
+from swarms import Agent
+
+from news_swarm.main import NewsAgent
+
+load_dotenv()
+
+# Get the OpenAI API key from the environment variable
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Create an instance of the OpenAIChat class
+model = OpenAIChat(
+    openai_api_key=api_key, model_name="gpt-4o-mini", temperature=0.1
+)
+
+# Initialize the agent
+agent = Agent(
+    agent_name="News-Agent-V1",
+    # system_prompt=FINANCIAL_AGENT_SYS_PROMPT,
+    llm=model,
+    max_loops=1,
+    autosave=True,
+    dashboard=False,
+    verbose=True,
+    dynamic_temperature_enabled=True,
+    saved_state_path="news_agent.json",
+    user_name="swarms_corp",
+    retry_attempts=1,
+    context_length=200000,
+    return_step_meta=False,
+    # output_type="json",
+)
+
+# Agent
+agent = NewsAgent(
+    agent_name="news-agent-v1",
+    agent=agent,
+    newsapi_api_key=os.getenv("NEWSAPI_API_KEY"),
+    system_prompt=None,
+    return_json=True,
+    # start_date="2024-08-01",
+    # end_date="2024-08-10"
+)
+
+
+# Run the agent
+# agent.run(["multi-agent collaboration"])
+agent.run_concurrently(["Swarm Multi-Agent", "AGI"])
+
+
 ```
 
-### 2. Fetch and Summarize News
 
-```python
-# Fetch and summarize articles on a specific topic
-summary = agent.fetch_and_summarize("Artificial Intelligence", sources=["techcrunch", "reuters"])
-
-print(summary)
-```
-
+<!-- 
 ### 3. Customize Query Parameters
 
 You can customize query parameters such as date ranges, languages, and source priorities:
@@ -57,40 +104,9 @@ summary = agent.fetch_and_summarize(
 )
 
 print(summary)
-```
+``` -->
 
-### 4. Real-Time News Monitoring
-
-Set up continuous real-time monitoring for specific keywords and receive updates as new articles are published:
-
-```python
-agent.start_monitoring(
-    "Global Markets",
-    interval=3600,  # Fetch updates every hour
-    on_update_callback=lambda summary: print(f"New Summary: {summary}")
-)
-```
-
-## Configuration
-
-You can customize the behavior of **NewsAgent** via several configuration options:
-
-```python
-agent = NewsAgent(
-    api_key="your_api_key", 
-    timeout=10,  # Timeout for API requests in seconds
-    max_articles=10  # Maximum number of articles to fetch per query
-)
-```
-
-### Available Parameters:
-- `api_key`: Your API key for accessing news data (required).
-- `timeout`: Set a timeout limit for API requests (default: 10 seconds).
-- `max_articles`: Limit the number of articles fetched and summarized (default: 10).
-- `sources`: List of news sources to prioritize during querying.
-- `language`: Specify the language of the news articles (e.g., `en` for English).
-- `date_range`: Specify the date range for fetching articles (format: `YYYY-MM-DD:YYYY-MM-DD`).
-
+<!-- 
 ## Advanced Usage
 
 **NewsAgent** also supports advanced use cases such as bulk fetching and deep analysis of specific sectors:
@@ -117,7 +133,7 @@ agent.start_monitoring(
     interval=1800,  # 30 minutes
     on_update_callback=your_enterprise_notification_system.notify
 )
-```
+``` -->
 
 ## Security
 
@@ -132,11 +148,11 @@ For enterprise customers, we offer:
 - **Custom Feature Development**
 - **Integration Assistance** for your existing platforms (CRM, ERP, etc.)
 
-For more information on enterprise solutions, contact us at [enterprise@newsagent.com](mailto:enterprise@newsagent.com).
+For more information on enterprise solutions, contact us at [kye@swarms.world](mailto:kye@swarms.world).
 
 ## Contributing
 
-We welcome contributions! If you'd like to contribute to **NewsAgent**, please open an issue or submit a pull request via our [GitHub repository](https://github.com/your-repo/news-agent).
+We welcome contributions! If you'd like to contribute to **NewsAgent**, please open an issue or submit a pull request via our [GitHub repository](https://github.com/The-Swarm-Corporation/NewsAgent).
 
 ## License
 
