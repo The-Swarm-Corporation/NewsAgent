@@ -2,3 +2,4 @@ swarms
 loguru
 pydantic
 newsapi-python
+swarm_models

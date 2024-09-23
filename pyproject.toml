@@ -3,8 +3,8 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "news-agent"
-version = "0.0.1"
+name = "news-swarm"
+version = "0.0.3"
 description = "NewsAgent - TGSC"
 license = "MIT"
 authors = ["Kye Gomez <kye@apac.ai>"]
@@ -27,6 +27,7 @@ swarms = "*"
 loguru = "*"
 pydantic = "*"
 newsapi-python = "*"
+swarm_models = "*"
 
 
 [tool.poetry.group.lint.dependencies]

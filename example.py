@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from swarm_models import OpenAIChat
 from swarms import Agent
 
-from news_agent.main import NewsAgent
+from news_swarm.main import NewsAgent
 
 load_dotenv()
 

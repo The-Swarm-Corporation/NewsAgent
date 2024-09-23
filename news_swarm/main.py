@@ -3,11 +3,11 @@ import time
 import uuid
 from concurrent.futures import ThreadPoolExecutor
 from typing import List, Optional, Any
-from news_agent.prompts import NEWS_SYS_PROMPT
+from news_swarm.prompts import NEWS_SYS_PROMPT
 from pydantic import BaseModel, Field
 from swarms import Agent, create_file_in_folder
 
-from news_agent.tool import fetch_stock_news
+from news_swarm.tool import fetch_stock_news
 
 
 class InputLog(BaseModel):
