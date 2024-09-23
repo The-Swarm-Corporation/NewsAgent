@@ -135,11 +135,11 @@ agent.start_monitoring(
 )
 ``` -->
 
-## Security
+<!-- ## Security
 
 NewsAgent follows strict security protocols:
 - **API Key Encryption**: All API keys are securely stored and transmitted using industry-standard encryption methods.
-- **Data Privacy**: NewsAgent does not store any news data or summaries beyond what is necessary for real-time operations.
+- **Data Privacy**: NewsAgent does not store any news data or summaries beyond what is necessary for real-time operations. -->
 
 ## Enterprise Support
 
