@@ -47,5 +47,6 @@ agent = NewsAgent(
 
 
 # Run the agent
-print(agent.run("multi-agent collaboration"))
+# print(agent.run("multi-agent collaboration"))
 print(agent.run_concurrently(["OpenAI", "Anthropic"]))
+# print(agent.return_sources("Science"))

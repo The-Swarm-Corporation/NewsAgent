@@ -7,8 +7,9 @@ from news_swarm.prompts import NEWS_SYS_PROMPT
 from pydantic import BaseModel, Field
 from swarms import Agent, create_file_in_folder
 
-from news_swarm.tool import fetch_stock_news
+from news_swarm.tool import fetch_stock_news, return_sources
 from loguru import logger
+
 
 class InputLog(BaseModel):
     id: Optional[str] = Field(
@@ -66,6 +67,17 @@ class NewsAgent(Agent):
     """
     A specialized agent for fetching and processing news articles based on given tasks.
     It utilizes the News API to fetch articles and a language model to generate summaries.
+
+    Args:
+        agent_name (str): The name of the agent.
+        newsapi_api_key (str, optional): The API key for News API. Defaults to None.
+        system_prompt (str, optional): The system prompt for the language model. Defaults to None.
+        llm (BaseLLM, optional): The language model to use for summarization. Defaults to None.
+        agent (Agent, optional): The base agent to inherit from. Defaults to None.
+        start_date (Optional[str], optional): The start date for the news query in 'YYYY-MM-DD' format. Defaults to None.
+        end_date (Optional[str], optional): The end date for the news query in 'YYYY-MM-DD' format. Defaults to None.
+        return_json (bool, optional): If True, return the result as a JSON object, otherwise return a formatted string. Defaults to False.
+        max_articles (int, optional): The maximum number of articles to fetch. Defaults to 5.
     """
 
     def __init__(
@@ -80,20 +92,7 @@ class NewsAgent(Agent):
         max_articles: int = 5,
         autosave: bool = True,
     ):
-        """
-        Initializes the NewsAgent with the necessary parameters.
 
-        Args:
-            agent_name (str): The name of the agent.
-            newsapi_api_key (str, optional): The API key for News API. Defaults to None.
-            system_prompt (str, optional): The system prompt for the language model. Defaults to None.
-            llm (BaseLLM, optional): The language model to use for summarization. Defaults to None.
-            agent (Agent, optional): The base agent to inherit from. Defaults to None.
-            start_date (Optional[str], optional): The start date for the news query in 'YYYY-MM-DD' format. Defaults to None.
-            end_date (Optional[str], optional): The end date for the news query in 'YYYY-MM-DD' format. Defaults to None.
-            return_json (bool, optional): If True, return the result as a JSON object, otherwise return a formatted string. Defaults to False.
-            max_articles (int, optional): The maximum number of articles to fetch. Defaults to 5.
-        """
         self.agent_name = agent_name
         self.system_prompt = system_prompt
         self.newsapi_api_key = newsapi_api_key
@@ -120,15 +119,17 @@ class NewsAgent(Agent):
 
     def run(self, task: str, *args, **kwargs):
         """
-        Runs the news fetching and summarization process sequentially for each task.
+        Executes the news retrieval and summarization process sequentially for a given task.
+
+        This method fetches news articles related to the specified task, summarizes the content, and logs the process. It supports both string and JSON output formats based on the `return_json` parameter.
 
         Args:
-            tasks (List[str]): A list of tasks or queries to process.
+            task (str): The task or query to process.
 
         Returns:
-            Union[str, dict]: The output of the process, either a formatted string or a JSON object depending on the return_json parameter.
+            Union[str, dict]: The output of the process, either a formatted string or a JSON object depending on the `return_json` parameter.
         """
-        logger.info("Running task Now")
+        logger.info("Initiating task execution")
         self.output_log.input_log.query = task
 
         string_query, *data_dict = fetch_stock_news(
@@ -138,8 +139,8 @@ class NewsAgent(Agent):
             self.end_date,
             max_articles=self.max_articles,
         )
-        
-        logger.info(f"Fetched the articles now")
+
+        logger.info(f"Completed fetching articles for task {task}")
 
         summary = self.agent.run(string_query)
 
@@ -149,29 +150,19 @@ class NewsAgent(Agent):
         )
 
         self.output_log.output_logs.append(output_log_indi)
-        
-        logger.info(f"Finished summarizing this query {task}")
 
-        # # Save the log
-        # create_file_in_folder(
-        #     "news_agent_runs",
-        #     f"news_agent_run_id:{self.output_log.id}.json",
-        #     self.output_log.model_dump_json(indent=4),
-        # )
+        logger.info(f"Summarization completed for task {task}")
 
-        # if self.return_json is True:
-        #     return self.output_log.model_dump_json(indent=4)
-
-        # else:
-        #     return summary
         return summary
 
     def run_concurrently(self, tasks: List[str]) -> str:
         """
-        Runs the news fetching and summarization process concurrently for each task.
+        Executes the news retrieval and summarization process concurrently for a list of tasks.
+
+        This method leverages multithreading to process multiple tasks simultaneously, ensuring efficient handling of multiple queries. The output is always in JSON format.
 
         Args:
-            tasks (List[str]): A list of tasks or queries to process.
+            tasks (List[str]): A list of tasks or queries to process concurrently.
 
         Returns:
             str: The output of the process as a JSON object.
@@ -183,8 +174,7 @@ class NewsAgent(Agent):
             }
             for future in futures:
                 future.result()  # Wait for all tasks to complete
-                
-        
+
         # Save the log
         create_file_in_folder(
             "news_agent_runs",
@@ -193,3 +183,17 @@ class NewsAgent(Agent):
         )
 
         return self.output_log.model_dump_json(indent=4)
+
+    def return_sources(self, source: Any, *args, **kwargs):
+        """
+        Returns sources related to a given source or query.
+
+        This method is a wrapper for fetching sources based on a provided source or query. It utilizes the `newsapi_api_key` for authentication.
+
+        Args:
+            source (Any): The source or query to fetch related sources for.
+
+        Returns:
+            Any: The fetched sources based on the provided source or query.
+        """
+        return return_sources(source, self.newsapi_api_key)

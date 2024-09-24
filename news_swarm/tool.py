@@ -1,5 +1,5 @@
 from newsapi import NewsApiClient
-from typing import Optional, Dict, Union, List
+from typing import Optional, Dict, Union, List, Literal
 
 
 def fetch_stock_news(
@@ -103,3 +103,60 @@ def fetch_stock_news(
 
 # # Example
 # out = fetch_stock_news("Swarms")
+
+
+def return_sources(
+    source: Literal[
+        "business",
+        "entertainment",
+        "general",
+        "health",
+        "science",
+        "sports",
+        "technology",
+    ],
+    newsapi_api_key: str = None,
+    *args,
+    **kwargs,
+):
+    """
+    Fetches stock news for a query within a specified date range using NewsApiClient.
+
+    Args:
+        query (str): The query name or stock symbol to query news for.
+        newsapi_api_key (str): Your API key for News API.
+        start_date (Optional[str]): The start date for the news query in 'YYYY-MM-DD' format (default: None).
+        end_date (Optional[str]): The end date for the news query in 'YYYY-MM-DD' format (default: None).
+        max_articles (int): The maximum number of articles to retrieve (default: 5).
+        return_json (bool): If True, return the result as a JSON object, otherwise return a formatted string (default: False).
+
+    Returns:
+        Union[Dict[str, Union[str, List[Dict[str, str]]]], str]:
+        A JSON object (if return_json=True) containing articles and metadata, or a formatted string of the news articles.
+    """
+
+    # Initialize the NewsApiClient with the provided API key
+    newsapi = NewsApiClient(api_key=newsapi_api_key)
+
+    data = newsapi.get_sources(category=source, *args, **kwargs)
+
+    return data
+
+
+def return_headlines(
+    source: str = None, newsapi_api_key: str = None, *args, **kwargs
+):
+    """
+    Fetches stock news for a query within a specified date range using NewsApiClient.
+
+    Args:
+        query (str): The query name or stock symbol to query news for.
+        newsapi_api_key (str): Your API key for News API.
+    """
+
+    # Initialize the NewsApiClient with the provided API key
+    newsapi = NewsApiClient(api_key=newsapi_api_key)
+
+    data = newsapi.get_top_headlines(sources=source, *args, **kwargs)
+
+    return data

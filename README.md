@@ -50,7 +50,7 @@ model = OpenAIChat(
 )
 
 # Initialize the agent
-agent = Agent(
+base_agent = Agent(
     agent_name="News-Agent-V1",
     # system_prompt=FINANCIAL_AGENT_SYS_PROMPT,
     llm=model,
@@ -70,7 +70,7 @@ agent = Agent(
 # Agent
 agent = NewsAgent(
     agent_name="news-agent-v1",
-    agent=agent,
+    agent=base_agent,
     newsapi_api_key=os.getenv("NEWSAPI_API_KEY"),
     system_prompt=None,
     return_json=True,
@@ -80,8 +80,8 @@ agent = NewsAgent(
 
 
 # Run the agent
-# agent.run(["multi-agent collaboration"])
-agent.run_concurrently(["Swarm Multi-Agent", "AGI"])
+print(agent.run("multi-agent collaboration"))
+print(agent.run_concurrently(["OpenAI", "Anthropic"]))
 
 
 ```
