@@ -6,10 +6,10 @@
 
 **NewsAgent** is an enterprise-grade news aggregation agent designed to fetch, query, and summarize news from multiple sources at scale. Built for modern businesses, NewsAgent enables you to automate the process of news monitoring, delivering summarized, relevant, and timely news from across the web. Whether you need real-time updates or comprehensive analysis, NewsAgent can seamlessly integrate into your workflows, ensuring that you always stay informed.
 
-## Key Features
+<!-- ## Key Features
 
 
-- **Multi-Article Summarization**: Efficiently summarizes multiple articles at once, reducing the noise and delivering concise insights.
+- **Multi-Article Summarization**: Efficiently summarizes multiple articles at once, reducing the noise and delivering concise insights. -->
 
 ## Installation
 
@@ -148,10 +148,13 @@ For enterprise customers, we offer:
 For more information on enterprise solutions, contact us at [kye@swarms.world](mailto:kye@swarms.world).
 
 # Todo
-- **Smart Query Crafting**: Automatically creates optimized queries to fetch the most relevant news from multiple sources.
+- **Smart Query Crafting**: Automatically creates optimized queries using an llm to fetch the most relevant news from multiple sources.
 - **Real-Time Updates**: Fetch news in real-time or set scheduled intervals for continuous monitoring.
 - **Customizable Sources**: Add or remove specific news sources, tailored to your business needs.
 <!-- - **Enterprise Integration**: Easily integrates into existing enterprise platforms for automated news monitoring and alert systems. -->
+- **Bing API**: Implement Bing API for search
+- **Google API**: Implement Google API for search
+- **Free Seaarch**: Implement a free, fast, reliable search mechanism that runs completely locally and privately. 
 
 
 ## Contributing

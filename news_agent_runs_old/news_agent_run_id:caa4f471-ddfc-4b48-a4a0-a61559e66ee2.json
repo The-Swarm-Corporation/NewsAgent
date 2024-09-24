@@ -1,0 +1,159 @@
+{
+    "id": "caa4f471-ddfc-4b48-a4a0-a61559e66ee2",
+    "input_log": {
+        "id": "e479e51f-8a3b-439b-bba8-91e00b21c3d8",
+        "query": "Ukraine attack",
+        "start_date": null,
+        "end_date": null,
+        "return_json": true,
+        "max_articles": 5,
+        "time_stamp": "2024-09-23 20:04:46"
+    },
+    "output_logs": [
+        {
+            "id": "b172868b-afa1-4d9a-80cf-e8ead4a39d1f",
+            "articles": {
+                "query": "Hezbollah attack",
+                "start_date": null,
+                "end_date": null,
+                "formatted_result": "News Articles for Hezbollah attack:\n\n\nArticle 1:\nTitle: Exploding pagers kill at least eight and injure thousands in an attack on Hezbollah\nDescription: Hundreds of Hezbollah members have reportedly been injured by exploding pagers in an attack triggered Tuesday afternoon across parts of Lebanon and Syria.\nURL: https://www.theverge.com/2024/9/17/24247200/exploding-pager-attack-hezbollah-lebanon-syria\nPublished At: 2024-09-17T16:13:06Z\nSource: The Verge\n\n\nArticle 2:\nTitle: First Israel’s Exploding Pagers Maimed and Killed. Now Comes the Paranoia\nDescription: The explosion of thousands of rigged pagers and walkie-talkies will likely make Hezbollah operatives fear any means of electronic communication. It’s having the same effect on the Lebanese population.\nURL: https://www.wired.com/story/hezbollah-israel-exploding-pagers-paranoia/\nPublished At: 2024-09-19T14:16:21Z\nSource: Wired\n\n\nArticle 3:\nTitle: Pagers Explode in Lebanon, Injuring Hundreds of Members of Hezbollah\nDescription: The 1980s-style telecommunications device is popular with militants and criminals because of its perceived safety and security.\nURL: https://gizmodo.com/pagers-explode-in-lebanon-injuring-hundreds-of-members-of-hezbollah-2000499767\nPublished At: 2024-09-17T16:00:28Z\nSource: Gizmodo.com\n\n\nArticle 4:\nTitle: Everything We Know About Lebanon’s Exploding Pagers\nDescription: The old technology is used because it's more durable, reliable, and was thought to be more secure from attack.\nURL: https://gizmodo.com/everything-we-know-about-lebanons-exploding-pagers-2000500259\nPublished At: 2024-09-18T15:45:17Z\nSource: Gizmodo.com\n\n\nArticle 5:\nTitle: How Israel Built and Sold Explosive Pagers to Hezbollah\nDescription: It took years, three different shell companies, and an explosive called pentaerythritol tetranitrate, according to reports.\nURL: https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871\nPublished At: 2024-09-19T17:30:11Z\nSource: Gizmodo.com\n\n",
+                "articles": [
+                    {
+                        "title": "Exploding pagers kill at least eight and injure thousands in an attack on Hezbollah",
+                        "description": "Hundreds of Hezbollah members have reportedly been injured by exploding pagers in an attack triggered Tuesday afternoon across parts of Lebanon and Syria.",
+                        "url": "https://www.theverge.com/2024/9/17/24247200/exploding-pager-attack-hezbollah-lebanon-syria",
+                        "published_at": "2024-09-17T16:13:06Z",
+                        "source": "The Verge"
+                    },
+                    {
+                        "title": "First Israel’s Exploding Pagers Maimed and Killed. Now Comes the Paranoia",
+                        "description": "The explosion of thousands of rigged pagers and walkie-talkies will likely make Hezbollah operatives fear any means of electronic communication. It’s having the same effect on the Lebanese population.",
+                        "url": "https://www.wired.com/story/hezbollah-israel-exploding-pagers-paranoia/",
+                        "published_at": "2024-09-19T14:16:21Z",
+                        "source": "Wired"
+                    },
+                    {
+                        "title": "Pagers Explode in Lebanon, Injuring Hundreds of Members of Hezbollah",
+                        "description": "The 1980s-style telecommunications device is popular with militants and criminals because of its perceived safety and security.",
+                        "url": "https://gizmodo.com/pagers-explode-in-lebanon-injuring-hundreds-of-members-of-hezbollah-2000499767",
+                        "published_at": "2024-09-17T16:00:28Z",
+                        "source": "Gizmodo.com"
+                    },
+                    {
+                        "title": "Everything We Know About Lebanon’s Exploding Pagers",
+                        "description": "The old technology is used because it's more durable, reliable, and was thought to be more secure from attack.",
+                        "url": "https://gizmodo.com/everything-we-know-about-lebanons-exploding-pagers-2000500259",
+                        "published_at": "2024-09-18T15:45:17Z",
+                        "source": "Gizmodo.com"
+                    },
+                    {
+                        "title": "How Israel Built and Sold Explosive Pagers to Hezbollah",
+                        "description": "It took years, three different shell companies, and an explosive called pentaerythritol tetranitrate, according to reports.",
+                        "url": "https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871",
+                        "published_at": "2024-09-19T17:30:11Z",
+                        "source": "Gizmodo.com"
+                    }
+                ]
+            },
+            "summary": "To assist you in gathering information about the recent Hezbollah attack involving exploding pagers, here are the details of relevant news articles:\n\n### 1. Exploding Pagers Kill at Least Eight and Injure Thousands in an Attack on Hezbollah\n- **Description:** Hundreds of Hezbollah members have reportedly been injured by exploding pagers in an attack triggered Tuesday afternoon across parts of Lebanon and Syria.\n- **Published At:** September 17, 2024\n- **Source:** [The Verge](https://www.theverge.com/2024/9/17/24247200/exploding-pager-attack-hezbollah-lebanon-syria)\n\n### 2. First Israel’s Exploding Pagers Maimed and Killed. Now Comes the Paranoia\n- **Description:** The explosion of thousands of rigged pagers and walkie-talkies will likely make Hezbollah operatives fear any means of electronic communication. It’s having the same effect on the Lebanese population.\n- **Published At:** September 19, 2024\n- **Source:** [Wired](https://www.wired.com/story/hezbollah-israel-exploding-pagers-paranoia/)\n\n### 3. Pagers Explode in Lebanon, Injuring Hundreds of Members of Hezbollah\n- **Description:** The 1980s-style telecommunications device is popular with militants and criminals because of its perceived safety and security.\n- **Published At:** September 17, 2024\n- **Source:** [Gizmodo](https://gizmodo.com/pagers-explode-in-lebanon-injuring-hundreds-of-members-of-hezbollah-2000499767)\n\n### 4. Everything We Know About Lebanon’s Exploding Pagers\n- **Description:** The old technology is used because it's more durable, reliable, and was thought to be more secure from attack.\n- **Published At:** September 18, 2024\n- **Source:** [Gizmodo](https://gizmodo.com/everything-we-know-about-lebanons-exploding-pagers-2000500259)\n\n### 5. How Israel Built and Sold Explosive Pagers to Hezbollah\n- **Description:** It took years, three different shell companies, and an explosive called pentaerythritol tetranitrate, according to reports.\n- **Published At:** September 19, 2024\n- **Source:** [Gizmodo](https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871)\n\nThese articles provide a comprehensive overview of the situation, including the impact of the attack, implications for communication security, and background on the technology used. If you need further analysis or specific insights from these articles, please let me know!",
+            "time_stamp": "2024-09-23 20:04:46"
+        },
+        {
+            "id": "b172868b-afa1-4d9a-80cf-e8ead4a39d1f",
+            "articles": {
+                "query": "Israel",
+                "start_date": null,
+                "end_date": null,
+                "formatted_result": "News Articles for Israel:\n\n\nArticle 1:\nTitle: WhatsApp Shuts Down Iranian Hackers Targeting Trump and Biden Campaigns\nDescription: Human rights activists in Israel and Iran were also targeted.\nURL: https://gizmodo.com/whatsapp-shuts-down-iranian-hackers-targeting-trump-and-biden-campaigns-2000490607\nPublished At: 2024-08-25T12:00:01Z\nSource: Gizmodo.com\n\n\nArticle 2:\nTitle: How Israel Built and Sold Explosive Pagers to Hezbollah\nDescription: It took years, three different shell companies, and an explosive called pentaerythritol tetranitrate, according to reports.\nURL: https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871\nPublished At: 2024-09-19T17:30:11Z\nSource: Gizmodo.com\n\n\nArticle 3:\nTitle: Israel says top Hezbollah commander killed in Beirut strike\nDescription: The strike in Lebanon's capital, which killed at least 14 people, adds to fears of an all-out war.\nURL: https://www.bbc.com/news/articles/c5y9wyy9pr2o\nPublished At: 2024-09-20T20:47:27Z\nSource: BBC News\n\n\nArticle 4:\nTitle: Israel investigates after its soldiers filmed throwing bodies off roof\nDescription: The IDF says the incident does not \"conform\" to its values, while Palestinian officials say it is a \"crime\".\nURL: https://www.bbc.com/news/articles/cn8jg0x5xg8o\nPublished At: 2024-09-20T14:35:19Z\nSource: BBC News\n\n\nArticle 5:\nTitle: Has Israel taken enough action to prevent alleged incitement to genocide?\nDescription: In January, the ICJ ordered Israel to prevent public statements inciting genocide - critics say it’s not doing enough.\nURL: https://www.bbc.com/news/articles/cze5w2wd4x0o\nPublished At: 2024-08-26T23:11:37Z\nSource: BBC News\n\n",
+                "articles": [
+                    {
+                        "title": "WhatsApp Shuts Down Iranian Hackers Targeting Trump and Biden Campaigns",
+                        "description": "Human rights activists in Israel and Iran were also targeted.",
+                        "url": "https://gizmodo.com/whatsapp-shuts-down-iranian-hackers-targeting-trump-and-biden-campaigns-2000490607",
+                        "published_at": "2024-08-25T12:00:01Z",
+                        "source": "Gizmodo.com"
+                    },
+                    {
+                        "title": "How Israel Built and Sold Explosive Pagers to Hezbollah",
+                        "description": "It took years, three different shell companies, and an explosive called pentaerythritol tetranitrate, according to reports.",
+                        "url": "https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871",
+                        "published_at": "2024-09-19T17:30:11Z",
+                        "source": "Gizmodo.com"
+                    },
+                    {
+                        "title": "Israel says top Hezbollah commander killed in Beirut strike",
+                        "description": "The strike in Lebanon's capital, which killed at least 14 people, adds to fears of an all-out war.",
+                        "url": "https://www.bbc.com/news/articles/c5y9wyy9pr2o",
+                        "published_at": "2024-09-20T20:47:27Z",
+                        "source": "BBC News"
+                    },
+                    {
+                        "title": "Israel investigates after its soldiers filmed throwing bodies off roof",
+                        "description": "The IDF says the incident does not \"conform\" to its values, while Palestinian officials say it is a \"crime\".",
+                        "url": "https://www.bbc.com/news/articles/cn8jg0x5xg8o",
+                        "published_at": "2024-09-20T14:35:19Z",
+                        "source": "BBC News"
+                    },
+                    {
+                        "title": "Has Israel taken enough action to prevent alleged incitement to genocide?",
+                        "description": "In January, the ICJ ordered Israel to prevent public statements inciting genocide - critics say it’s not doing enough.",
+                        "url": "https://www.bbc.com/news/articles/cze5w2wd4x0o",
+                        "published_at": "2024-08-26T23:11:37Z",
+                        "source": "BBC News"
+                    }
+                ]
+            },
+            "summary": "It seems you're looking for news articles related to recent events involving Hezbollah and Israel. Here’s a summary of the articles available:\n\n### Hezbollah Attack Articles:\n\n1. **Exploding Pagers Kill at Least Eight and Injure Thousands in an Attack on Hezbollah**\n   - **Description:** Hundreds of Hezbollah members were injured by exploding pagers in an attack across Lebanon and Syria.\n   - **Published At:** September 17, 2024\n   - **Source:** [The Verge](https://www.theverge.com/2024/9/17/24247200/exploding-pager-attack-hezbollah-lebanon-syria)\n\n2. **First Israel’s Exploding Pagers Maimed and Killed. Now Comes the Paranoia**\n   - **Description:** The explosion of rigged pagers has instilled fear among Hezbollah operatives and the Lebanese population regarding electronic communication.\n   - **Published At:** September 19, 2024\n   - **Source:** [Wired](https://www.wired.com/story/hezbollah-israel-exploding-pagers-paranoia/)\n\n3. **Pagers Explode in Lebanon, Injuring Hundreds of Members of Hezbollah**\n   - **Description:** The use of pagers, popular among militants for their perceived security, resulted in numerous injuries.\n   - **Published At:** September 17, 2024\n   - **Source:** [Gizmodo](https://gizmodo.com/pagers-explode-in-lebanon-injuring-hundreds-of-members-of-hezbollah-2000499767)\n\n4. **Everything We Know About Lebanon’s Exploding Pagers**\n   - **Description:** Discusses the durability and reliability of pagers, which were thought to be secure from attacks.\n   - **Published At:** September 18, 2024\n   - **Source:** [Gizmodo](https://gizmodo.com/everything-we-know-about-lebanons-exploding-pagers-2000500259)\n\n5. **How Israel Built and Sold Explosive Pagers to Hezbollah**\n   - **Description:** Details the process of how Israel developed and sold explosive devices disguised as pagers to Hezbollah.\n   - **Published At:** September 19, 2024\n   - **Source:** [Gizmodo](https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871)\n\n### Israel Articles:\n\n1. **WhatsApp Shuts Down Iranian Hackers Targeting Trump and Biden Campaigns**\n   - **Description:** Reports on the targeting of human rights activists in Israel and Iran.\n   - **Published At:** August 25, 2024\n   - **Source:** [Gizmodo](https://gizmodo.com/whatsapp-shuts-down-iranian-hackers-targeting-trump-and-biden-campaigns-2000490607)\n\n2. **How Israel Built and Sold Explosive Pagers to Hezbollah**\n   - **Description:** Same article as above detailing the development and sale of explosive pagers.\n   - **Published At:** September 19, 2024\n   - **Source:** [Gizmodo](https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871)\n\n3. **Israel Says Top Hezbollah Commander Killed in Beirut Strike**\n   - **Description:** A strike in Beirut that killed at least 14 people raises fears of escalating conflict.\n   - **Published At:** September 20, 2024\n   - **Source:** [BBC News](https://www.bbc.com/news/articles/c5y9wyy9pr2o)\n\n4. **Israel Investigates After Its Soldiers Filmed Throwing Bodies Off Roof**\n   - **Description:** The IDF's response to an incident that has drawn criticism from Palestinian officials.\n   - **Published At:** September 20, 2024\n   - **Source:** [BBC News](https://www.bbc.com/news/articles/cn8jg0x5xg8o)\n\n5. **Has Israel Taken Enough Action to Prevent Alleged Incitement to Genocide?**\n   - **Description:** Discussion on Israel's compliance with an ICJ order regarding incitement to genocide.\n   - **Published At:** August 26, 2024\n   - **Source:** [BBC News](https://www.bbc.com/news/articles/cze5w2wd4x0o)\n\nIf you need further analysis or a specific focus on any of these articles, let me know!",
+            "time_stamp": "2024-09-23 20:04:46"
+        },
+        {
+            "id": "b172868b-afa1-4d9a-80cf-e8ead4a39d1f",
+            "articles": {
+                "query": "Ukraine attack",
+                "start_date": null,
+                "end_date": null,
+                "formatted_result": "News Articles for Ukraine attack:\n\n\nArticle 1:\nTitle: Three Red Cross staff killed in strike in eastern Ukraine\nDescription: The aid agency condemned the attack on its workers saying its vehicles are clearly marked.\nURL: https://www.bbc.com/news/articles/c4glgex9przo\nPublished At: 2024-09-12T14:10:11Z\nSource: BBC News\n\n\nArticle 2:\nTitle: Ukrainian soldiers killed in SUV donated by miners\nDescription: A vehicle donated by a group of Welsh miners is destroyed in Ukraine, killing six.\nURL: https://www.bbc.com/news/articles/cd7xnlxj8qjo\nPublished At: 2024-09-21T20:52:33Z\nSource: BBC News\n\n\nArticle 3:\nTitle: Ukrainians warn of being surrounded as Russia advances in east\nDescription: Speaking to the BBC, soldiers in eastern Ukraine fear that Russia is trying to surround them.\nURL: https://www.bbc.com/news/articles/c1epe546p5vo\nPublished At: 2024-09-14T00:41:43Z\nSource: BBC News\n\n\nArticle 4:\nTitle: Satellite images show damage at Russian base that stored glide bombs after Ukrainian long-range strike\nDescription: Ukraine targeted a base inside Russia that stored fuel, ammunition, and glide bombs with long-range attack drones last month.\nURL: https://www.businessinsider.com/satellite-images-show-damage-russian-base-after-ukrainian-drone-attack-2024-9\nPublished At: 2024-09-09T15:42:12Z\nSource: Business Insider\n\n\nArticle 5:\nTitle: Chris Mason: Washington talks were about second-guessing Putin\nDescription: The war in Ukraine hung over talks between the UK prime minister and US president in Washington.\nURL: https://www.bbc.com/news/articles/cp3w5449x9zo\nPublished At: 2024-09-14T04:51:41Z\nSource: BBC News\n\n",
+                "articles": [
+                    {
+                        "title": "Three Red Cross staff killed in strike in eastern Ukraine",
+                        "description": "The aid agency condemned the attack on its workers saying its vehicles are clearly marked.",
+                        "url": "https://www.bbc.com/news/articles/c4glgex9przo",
+                        "published_at": "2024-09-12T14:10:11Z",
+                        "source": "BBC News"
+                    },
+                    {
+                        "title": "Ukrainian soldiers killed in SUV donated by miners",
+                        "description": "A vehicle donated by a group of Welsh miners is destroyed in Ukraine, killing six.",
+                        "url": "https://www.bbc.com/news/articles/cd7xnlxj8qjo",
+                        "published_at": "2024-09-21T20:52:33Z",
+                        "source": "BBC News"
+                    },
+                    {
+                        "title": "Ukrainians warn of being surrounded as Russia advances in east",
+                        "description": "Speaking to the BBC, soldiers in eastern Ukraine fear that Russia is trying to surround them.",
+                        "url": "https://www.bbc.com/news/articles/c1epe546p5vo",
+                        "published_at": "2024-09-14T00:41:43Z",
+                        "source": "BBC News"
+                    },
+                    {
+                        "title": "Satellite images show damage at Russian base that stored glide bombs after Ukrainian long-range strike",
+                        "description": "Ukraine targeted a base inside Russia that stored fuel, ammunition, and glide bombs with long-range attack drones last month.",
+                        "url": "https://www.businessinsider.com/satellite-images-show-damage-russian-base-after-ukrainian-drone-attack-2024-9",
+                        "published_at": "2024-09-09T15:42:12Z",
+                        "source": "Business Insider"
+                    },
+                    {
+                        "title": "Chris Mason: Washington talks were about second-guessing Putin",
+                        "description": "The war in Ukraine hung over talks between the UK prime minister and US president in Washington.",
+                        "url": "https://www.bbc.com/news/articles/cp3w5449x9zo",
+                        "published_at": "2024-09-14T04:51:41Z",
+                        "source": "BBC News"
+                    }
+                ]
+            },
+            "summary": "It seems like you need news articles related to significant events involving Hezbollah, Israel, and Ukraine. Here’s a summary of the articles from each category based on the recent incidents:\n\n### Hezbollah Attack Articles:\n1. **Exploding Pagers Kill at Least Eight and Injure Thousands in an Attack on Hezbollah**  \n   Hundreds of Hezbollah members were reportedly injured due to exploding pagers across Lebanon and Syria.  \n   [Read more](https://www.theverge.com/2024/9/17/24247200/exploding-pager-attack-hezbollah-lebanon-syria)  \n   *Published on: September 17, 2024*\n\n2. **First Israel’s Exploding Pagers Maimed and Killed. Now Comes the Paranoia**  \n   The explosion of rigged pagers has instilled fear among Hezbollah operatives and the general Lebanese population regarding electronic communication.  \n   [Read more](https://www.wired.com/story/hezbollah-israel-exploding-pagers-paranoia/)  \n   *Published on: September 19, 2024*\n\n3. **Pagers Explode in Lebanon, Injuring Hundreds of Members of Hezbollah**  \n   The use of old-fashioned pagers, favored for their perceived security, led to a significant incident resulting in injuries.  \n   [Read more](https://gizmodo.com/pagers-explode-in-lebanon-injuring-hundreds-of-members-of-hezbollah-2000499767)  \n   *Published on: September 17, 2024*\n\n4. **Everything We Know About Lebanon’s Exploding Pagers**  \n   This article examines the characteristics that made pagers a preferred choice for militants and criminals.  \n   [Read more](https://gizmodo.com/everything-we-know-about-lebanons-exploding-pagers-2000500259)  \n   *Published on: September 18, 2024*\n\n5. **How Israel Built and Sold Explosive Pagers to Hezbollah**  \n   An investigative piece detailing the clandestine activities surrounding the creation and distribution of explosive pagers to Hezbollah.  \n   [Read more](https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871)  \n   *Published on: September 19, 2024*\n\n### Israel Articles:\n1. **WhatsApp Shuts Down Iranian Hackers Targeting Trump and Biden Campaigns**  \n   Human rights activists in both Israel and Iran were targeted by hackers.  \n   [Read more](https://gizmodo.com/whatsapp-shuts-down-iranian-hackers-targeting-trump-and-biden-campaigns-2000490607)  \n   *Published on: August 25, 2024*\n\n2. **How Israel Built and Sold Explosive Pagers to Hezbollah**  \n   This article is also relevant to Hezbollah and discusses Israel's actions leading to the attack.  \n   [Read more](https://gizmodo.com/how-israel-built-and-sold-explosive-pagers-to-hezbollah-2000500871)  \n   *Published on: September 19, 2024*\n\n3. **Israel Says Top Hezbollah Commander Killed in Beirut Strike**  \n   A military strike killed a leading Hezbollah figure, further escalating tensions in the region.  \n   [Read more](https://www.bbc.com/news/articles/c5y9wyy9pr2o)  \n   *Published on: September 20, 2024*\n\n4. **Israel Investigates After Its Soldiers Filmed Throwing Bodies Off Roof**  \n   An IDF incident has raised significant ethical questions, with Palestinian officials deeming it a crime.  \n   [Read more](https://www.bbc.com/news/articles/cn8jg0x5xg8o)  \n   *Published on: September 20, 2024*\n\n5. **Has Israel Taken Enough Action to Prevent Alleged Incitement to Genocide?**  \n   Critiques of Israel's response to the International Court of Justice's order regarding genocidal incitement.  \n   [Read more](https://www.bbc.com/news/articles/cze5w2wd4x0o)  \n   *Published on: August 26, 2024*\n\n### Ukraine Attack Articles:\n1. **Three Red Cross Staff Killed in Strike in Eastern Ukraine**  \n   The attack on clearly marked vehicles has drawn international condemnation.  \n   [Read more](https://www.bbc.com/news/articles/c4glgex9przo)  \n   *Published on: September 12, 2024*\n\n2. **Ukrainian Soldiers Killed in SUV Donated by Miners**  \n   A vehicle, donated to support the Ukrainian effort, was destroyed, leading to multiple fatalities.  \n   [Read more](https://www.bbc.com/news/articles/cd7xnlxj8qjo)  \n   *Published on: September 21, 2024*\n\n3. **Ukrainians Warn of Being Surrounded as Russia Advances in East**  \n   Soldiers express concerns over Russia's moves to encircle their positions.  \n   [Read more](https://www.bbc.com/news/articles/c1epe546p5vo)  \n   *Published on: September 14, 2024*\n\n4. **Satellite Images Show Damage at Russian Base After Ukrainian Long-Range Strike**  \n   Reports on Ukraine's successful attack on a Russian military installation.  \n   [Read more](https://www.businessinsider.com/satellite-images-show-damage-russian-base-after-ukrainian-drone-attack-2024-9)  \n   *Published on: September 9, 2024*\n\n5. **Chris Mason: Washington Talks Were About Second-Guessing Putin**  \n   Discussions between UK and US leaders also touched on the overarching situation in Ukraine.  \n   [Read more](https://www.bbc.com/news/articles/cp3w5449x9zo)  \n   *Published on: September 14, 2024*\n\nIf you need further summaries or specific details from any of these articles, feel free to ask!",
+            "time_stamp": "2024-09-23 20:04:46"
+        }
+    ],
+    "time_stamp": "2024-09-23 20:04:46"
+}

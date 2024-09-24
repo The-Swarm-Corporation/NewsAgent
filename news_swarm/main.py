@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 from swarms import Agent, create_file_in_folder
 
 from news_swarm.tool import fetch_stock_news
-
+from loguru import logger
 
 class InputLog(BaseModel):
     id: Optional[str] = Field(
@@ -78,7 +78,7 @@ class NewsAgent(Agent):
         end_date: Optional[str] = None,
         return_json: bool = False,
         max_articles: int = 5,
-        autosave: bool = False,
+        autosave: bool = True,
     ):
         """
         Initializes the NewsAgent with the necessary parameters.
@@ -118,7 +118,7 @@ class NewsAgent(Agent):
         # Transition the sys prompt of the agent
         self.agent.system_prompt = NEWS_SYS_PROMPT
 
-    def run(self, tasks: List[str], *args, **kwargs):
+    def run(self, task: str, *args, **kwargs):
         """
         Runs the news fetching and summarization process sequentially for each task.
 
@@ -128,39 +128,43 @@ class NewsAgent(Agent):
         Returns:
             Union[str, dict]: The output of the process, either a formatted string or a JSON object depending on the return_json parameter.
         """
-        for task in tasks:
-            self.output_log.input_log.query = task
+        logger.info("Running task Now")
+        self.output_log.input_log.query = task
 
-            string_query, data_dict = fetch_stock_news(
-                task,
-                self.newsapi_api_key,
-                self.start_date,
-                self.end_date,
-                max_articles=self.max_articles,
-            )
-            print(type(data_dict))
+        string_query, *data_dict = fetch_stock_news(
+            task,
+            self.newsapi_api_key,
+            self.start_date,
+            self.end_date,
+            max_articles=self.max_articles,
+        )
+        
+        logger.info(f"Fetched the articles now")
 
-            summary = self.agent.run(string_query)
+        summary = self.agent.run(string_query)
 
-            output_log_indi = OutputLogSummaries(
-                articles=data_dict,
-                summary=summary,
-            )
-
-            self.output_log.output_logs.append(output_log_indi)
-
-        # Save the log
-        create_file_in_folder(
-            "news_agent_runs",
-            f"news_agent_run_id:{self.output_log.id}.json",
-            self.output_log.model_dump_json(indent=4),
+        output_log_indi = OutputLogSummaries(
+            articles=data_dict,
+            summary=summary,
         )
 
-        if self.return_json is True:
-            return self.output_log.model_dump_json(indent=4)
+        self.output_log.output_logs.append(output_log_indi)
+        
+        logger.info(f"Finished summarizing this query {task}")
 
-        else:
-            return summary
+        # # Save the log
+        # create_file_in_folder(
+        #     "news_agent_runs",
+        #     f"news_agent_run_id:{self.output_log.id}.json",
+        #     self.output_log.model_dump_json(indent=4),
+        # )
+
+        # if self.return_json is True:
+        #     return self.output_log.model_dump_json(indent=4)
+
+        # else:
+        #     return summary
+        return summary
 
     def run_concurrently(self, tasks: List[str]) -> str:
         """
@@ -174,10 +178,18 @@ class NewsAgent(Agent):
         """
         with ThreadPoolExecutor() as executor:
             futures = {
-                executor.submit(self.run, [task]): task
+                executor.submit(self.run, task): task
                 for task in tasks
             }
             for future in futures:
                 future.result()  # Wait for all tasks to complete
+                
+        
+        # Save the log
+        create_file_in_folder(
+            "news_agent_runs",
+            f"news_agent_run_id:{self.output_log.id}.json",
+            self.output_log.model_dump_json(indent=4),
+        )
 
         return self.output_log.model_dump_json(indent=4)

@@ -53,4 +53,5 @@ Always reference the authors and the URL links associated with each article.
 5. **Do NOT provide a purely factual summary without strategic insight**:  
    - Go beyond just facts. Provide a short strategic insight on how the news might impact industries, businesses, or global markets.
 
+
 """
